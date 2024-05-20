@@ -5,8 +5,9 @@ interface Props {
 
 const { title } = Astro.props;
 
-import Button from '../components/Button.astro';
 import Header from '../components/Header.astro';
+import Navibar from '../components/Navibar.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -21,22 +22,22 @@ import Header from '../components/Header.astro';
 	</head>
 
 	<body>
-		<div id="app" class="relative h-screen p-1 gap-1">
+		<div id="app" class="relative h-screen p-1 gap-3">
 			<aside class="[grid-area:aside] flex flex-col items-end overflow-y-auto bg-#181C35">
 				<div class="flex items-center">
 					<img src="/logo.svg" alt="Logo" class="p-1 w-7">
 					<p class="text-xl p-2"><strong class="text-secondary text-xl">SOF</strong>
 						<strong class="text-white">DATA</strong></p>
 				</div>
-				<Header/>
+				<Navibar/>
 			  </aside>
 			<main class="[grid-area:main] bg-#181C35">
-
+				<Header/>
+				<slot/>
 			</main>
-			<footer class="[grid-area:player] min-h-[100px] bg-blue-300">
-				FOOTER
+			<footer class="[grid-area:player] min-h-[200px] bg-#181C35">
+				<Footer/>
 			</footer>
-			<slot />
 		</div>
 	</body>
 </html>

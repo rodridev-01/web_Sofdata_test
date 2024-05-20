@@ -1,0 +1,62 @@
+<div class="container">
+    <span class="text first-text">Evoluciona estratégicamente tu negocio con el poder de los </span>
+    <span class="text sec-text"></span>
+</div>
+
+<style>
+.container{
+margin-top:0px; 
+margin-left: 5%;
+width: 600px;
+}
+
+.container .text{
+    position: relative;
+    color: #E99E1E;
+    font-size: 40px;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color:white ;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1B1F2B;
+    border-left: 2px solid #E99E1E;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left:calc(100% + 2px);
+    }
+    100%{
+        left: 0%;
+    }
+
+}
+</style>
+
+<script>
+    const text=document.querySelector(".sec-text");
+
+    const textLoad= () =>{
+        setTimeout(() => {
+            text.textContent=" datos.";
+        },0);
+        setTimeout(() => {
+            text.textContent=" estudios.";
+        },4000);
+        setTimeout(() => {
+            text.textContent=" informes.";
+        },8000);          
+    }
+    textLoad();
+    setInterval(textLoad,12000)
+</script>
+

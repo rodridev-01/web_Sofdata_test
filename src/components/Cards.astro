@@ -1,0 +1,70 @@
+<div class="cards">
+    <div class="card red">
+        <p class="tip">ACERCA DE NOSOTROS</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div>
+    <div class="card blue">
+        <p class="tip">SERVICIOS</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div>
+    <div class="card green">
+        <p class="tip">PRECIOS</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div>
+    <div class="card red">
+        <p class="tip">CONTACTO</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div>
+</div>
+
+<style>
+.cards {
+  margin-top: 20px;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cards .red {
+  background-color: #007e9e;
+}
+
+.cards .blue {
+  background-color: #0062ff;
+}
+
+.cards .green {
+  background-color: #18cd5e;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+  width: 330px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: .7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+</style>
