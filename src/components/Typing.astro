@@ -43,20 +43,23 @@ width: 600px;
 </style>
 
 <script>
-    const text=document.querySelector(".sec-text");
+    const text = document.querySelector(".sec-text");
 
-    const textLoad= () =>{
-        setTimeout(() => {
-            text.textContent=" datos.";
-        },0);
-        setTimeout(() => {
-            text.textContent=" estudios.";
-        },4000);
-        setTimeout(() => {
-            text.textContent=" informes.";
-        },8000);          
+    const textLoad = () => {
+        if (text) { 
+            setTimeout(() => {
+                text.textContent = " datos.";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = " estudios.";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = " informes.";
+            }, 8000);          
+        }
     }
+
     textLoad();
-    setInterval(textLoad,12000)
+    setInterval(textLoad, 12000);
 </script>
 
